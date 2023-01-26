@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import 'firebase/auth';
-
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
 
 const firebaseConfig = {
@@ -17,7 +15,7 @@ const firebaseConfig = {
   };
   
   
-  const app = initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
 
 function Main() {
     const [email, setEmail] = useState('');
@@ -38,18 +36,18 @@ function Main() {
 
     return ( 
         <div>
-        <form className="bg-black p-6 rounded-lg shadow-md mx-auto" onSubmit={handleSubmit}>
+        <form className="bg-black p-6 rounded-lg shadow-md mx-auto text-center" onSubmit={handleSubmit}>
             <label className="block font-medium mb-2">
                 Email:
-                <input className="form-input rounded-md py-2 px-3 leading-5 text-gray-700 w-full"  type="email" value={email} onChange={e => setEmail(e.target.value)} />
+                <input className="form-input rounded-md py-2 px-3 leading-2 text-gray-700"  type="email" value={email} onChange={e => setEmail(e.target.value)} />
             </label>
             <br />
             <label className="block font-medium mb-2">
                 Password:
-                <input className="form-input rounded-md py-2 px-3 leading-5 text-gray-700 w-full"  type="password" value={password} onChange={e => setPassword(e.target.value)} />
+                <input className="form-input rounded-md py-2 px-3 leading-2 text-gray-700"  type="password" value={password} onChange={e => setPassword(e.target.value)} />
             </label>
             <br />
-            <button type="submit">Sign Up</button>
+            <button className='bg-gray-500 text-white p-3 rounded-lg' type="submit">Sign Up</button>
         </form></div>
     );
 }
