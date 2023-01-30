@@ -35,7 +35,7 @@ function Main() {
     }
 
     return ( 
-        <div>
+        <div className='display'>
         <form className="bg-black p-6 rounded-lg shadow-md mx-auto text-center" onSubmit={handleSubmit}>
             <label className="block font-medium mb-2">
                 Email:
