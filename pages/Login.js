@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import { initializeApp } from "firebase/app";
+ 
 
 const app = firebase.initializeApp ( {
   apiKey: "AIzaSyBLRfR5lRqTjiu2qumW_a09dgvEiP8vCw0",
@@ -15,7 +16,7 @@ const app = firebase.initializeApp ( {
 
 
 
-function Main() {
+function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -75,4 +76,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Login;

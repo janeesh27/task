@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import Main from "./Main";
 import Hero from "./Hero";
+import Login from "./Login";
 
-
+import StockSearch from "./StockSearch";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       
       
-        <Main />
+        <StockSearch />
       
       
     </div>
