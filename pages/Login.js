@@ -34,13 +34,14 @@ function Login() {
         // Handle errors
       });
   };
-
+ // justify-center items-center
   return (
-    <div className="flex align-middle mt-5">
+    <div className="flex align-middle mt-5">                                         
+  
       <form
         className="bg-black p-16 rounded-full shadow-md mx-auto text-center"
         onSubmit={handleSubmit}
-      >
+      >  
         <label className="block font-medium mb-2">
           Email
           <br />
