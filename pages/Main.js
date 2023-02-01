@@ -3,7 +3,7 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import { initializeApp } from "firebase/app";
 
-const firebaseConfig = {
+const app = firebase.initializeApp ( {
   apiKey: "AIzaSyBLRfR5lRqTjiu2qumW_a09dgvEiP8vCw0",
   authDomain: "stockscheck-1d88a.firebaseapp.com",
   projectId: "stockscheck-1d88a",
@@ -11,9 +11,9 @@ const firebaseConfig = {
   messagingSenderId: "569382062644",
   appId: "1:569382062644:web:5e6d5f68934e6edbc09861",
   measurementId: "G-LBEG00Z5CB",
-};
+})
 
-firebase.initializeApp(firebaseConfig);
+
 
 function Main() {
   const [email, setEmail] = useState("");
