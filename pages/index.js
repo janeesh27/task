@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import Hero from "./Hero";
-import Login from "./Login";
+import Login from "./components/Login";
 
-import StockSearch from "./StockSearch";
+import StockSearch from "./components/StockSearch";
 
 export default function Home() {
   return (
